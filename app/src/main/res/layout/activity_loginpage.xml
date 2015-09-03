@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/scrollAreaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_main"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_face"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="90dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_launcher" />
+
+        <RelativeLayout
+            android:id="@+id/loginInputView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/msg_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32.0dp"
+                android:layout_marginRight="32.0dp"
+                android:layout_marginTop="25.0dp"
+                android:background="@drawable/as_input_frame"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_account_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/account_input_prompt"
+                        android:imeOptions="actionNext|flagNoExtractUi"
+                        android:maxLength="50"
+                        android:paddingBottom="6.0dp"
+                        android:paddingLeft="50.0dp"
+                        android:paddingTop="6.0dp"
+                        android:singleLine="true"
+                        android:textColor="#ff333333"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/et_account_name"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10.0dp"
+                        android:text="@string/account"
+                        android:textColor="#ff333333"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0px"
+                    android:background="#ffcfd4da" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_account_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/password_input_prompt"
+                        android:imeActionLabel="@string/login"
+                        android:imeOptions="actionDone|flagNoExtractUi"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:maxLines="1"
+                        android:paddingBottom="6.0dp"
+                        android:paddingLeft="50.0dp"
+                        android:paddingTop="6.0dp"
+                        android:textColor="#ff333333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/et_account_password"
+                        android:paddingLeft="10.0dp"
+                        android:text="@string/password"
+                        android:textColor="#ff333333"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@id/msg_input"
+                android:layout_alignRight="@id/msg_input"
+                android:layout_below="@+id/msg_input"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/green_round_solid_btn"
+                android:gravity="center"
+                android:onClick="onLoginClick"
+                android:text="@string/login"
+                android:textColor="#ffffffff"
+                android:textSize="15.0sp" />
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:background="@null"
+                android:text="@string/account_register"
+                android:textSize="15.0sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</merge>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@mipmap/ui_titlebar_bg" >
+
+    <ImageView
+        android:id="@+id/ui_titlebar_back_btn"
+        style="@style/titlebar_left_btn"
+        android:onClick="myClickHandler" />
+
+    <TextView
+        android:id="@+id/ui_titlebar_org"
+        style="@style/titlebar_txt"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:text="杭州电子科技大学"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ui_titlebar_txt"
+        style="@style/titlebar_txt"
+        android:layout_above="@id/ui_titlebar_org" />
+
+    <ProgressBar
+        android:id="@+id/ivTitleProgress"
+        android:layout_width="32px"
+        android:layout_height="32px"
+        android:layout_toLeftOf="@id/ui_titlebar_txt"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@anim/common_loading_1"
+        android:visibility="gone"
+         />
+
+
+
+</RelativeLayout>

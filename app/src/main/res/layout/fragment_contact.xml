@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_main"
+    android:orientation="vertical">
+
+    <com.cfryan.wanglai4android.ui.view.ClearEditText
+        android:id="@+id/filter_edit"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/shape_high_rounded"
+        android:drawableLeft="@mipmap/icon_search"
+        android:hint="  请输入关键字"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textSize="15.0dip" />
+
+    <FrameLayout
+        android:id="@+id/fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/filter_edit">
+
+
+        <com.cfryan.wanglai4android.ui.view.PinnedSectionListView
+            android:id="@+id/lv_contact_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false" />
+
+    </FrameLayout>
+    <!--  </LinearLayout>-->
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+     <TextView
+        android:id="@+id/tv_audioRightDatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginTop="8.0dip"
+        android:background="@drawable/chat_time_block"
+        android:gravity="center_vertical"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip"
+        android:text="11:11"
+        android:textColor="@color/font_light"
+        android:textSize="10.0sp" />
+
+    <ImageView
+        android:id="@+id/iv_audioRightAvatar"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_audioRightDatetime"
+        android:layout_margin="5dip"
+        />
+
+    <Button
+        android:id="@+id/btn_audioRightAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:layout_toLeftOf="@+id/iv_audioRightAvatar"
+        android:layout_below="@id/tv_audioRightDatetime"
+        android:background="@drawable/chat_to_bg_normal"
+        android:drawableRight="@mipmap/chatto_voice_playing"
+        android:gravity="left"
+        android:paddingLeft="10dip"
+        android:textColor="#404040"
+        android:textSize="16dip" />
+
+    <TextView
+        android:id="@+id/tv_audioRightAudioTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dip"
+        android:layout_toLeftOf="@+id/btn_audioRightAudio"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="6min"
+        android:textColor="#404040"
+        android:textSize="14dip" />
+
+</RelativeLayout>

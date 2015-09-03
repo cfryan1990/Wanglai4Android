@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/iv_fileRightAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dip"
+        android:background="@mipmap/default_mobile_avatar" />
+
+    <Button
+        android:id="@+id/btn_fileRightFile"
+        android:layout_width="170dip"
+        android:layout_height="90dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:layout_toLeftOf="@+id/iv_fileRightAvatar"
+        android:background="@drawable/chat_img_to_bg_mask"
+        android:drawableLeft="@mipmap/sendfile_upload_normal"
+        android:gravity="center"
+        android:paddingLeft="10dip"
+        android:textColor="#404040"
+        android:textSize="16dip" />
+
+    <TextView
+        android:id="@+id/tv_fileRightFileSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btn_fileRightFile"
+        android:layout_below="@+id/iv_fileRightAvatar"
+        android:layout_marginRight="42dp"
+        android:gravity="center"
+        android:text="6.5M"
+        android:textColor="#404040"
+        android:textSize="16dip" />
+
+</RelativeLayout>

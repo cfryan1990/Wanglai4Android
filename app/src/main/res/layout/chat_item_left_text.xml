@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_normalLeftDatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginTop="8.0dip"
+        android:background="@drawable/chat_time_block"
+        android:gravity="center_vertical"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip"
+        android:text="11:11"
+        android:textColor="@color/font_light"
+        android:textSize="10.0sp" />
+
+    <ImageView
+        android:id="@+id/iv_normalLeftAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_normalLeftDatetime"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dip"
+        android:background="@mipmap/default_mobile_avatar" />
+
+    <Button
+        android:id="@+id/btn_normalLeftText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="200dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:layout_below="@id/tv_normalLeftDatetime"
+        android:layout_toRightOf="@+id/iv_normalLeftAvatar"
+        android:background="@drawable/chat_from_bg_normal"
+        android:gravity="right"
+        android:textColor="#404040"
+        android:textSize="15.0sp" />
+
+</RelativeLayout>

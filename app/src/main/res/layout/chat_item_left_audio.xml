@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/iv_audioLeftAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dip"
+        android:background="@mipmap/default_mobile_avatar" />
+
+    <Button
+        android:id="@+id/btn_audioLeftAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:layout_toRightOf="@+id/iv_audioLeftAvatar"
+        android:background="@drawable/chat_from_bg_normal"
+        android:drawableLeft="@mipmap/chatfrom_voice_playing"
+        android:gravity="center"
+        android:paddingLeft="10dip"
+        android:textColor="#404040"
+        android:textSize="16dip" />
+
+    <TextView
+        android:id="@+id/tv_audioLeftAudioTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btn_audioLeftAudio"
+        android:gravity="center"
+        android:text="6"
+        android:textColor="#404040"
+        android:textSize="16dip" />
+
+</RelativeLayout>

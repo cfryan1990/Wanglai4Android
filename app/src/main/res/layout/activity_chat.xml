@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/ui_titlebar" />
+
+    <FrameLayout
+        android:id="@+id/chat_body"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:visibility="visible" >
+
+        <com.cfryan.wanglai4android.ui.xlistview.MsgListView
+            android:id="@+id/msg_listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50dip"
+            android:background="#d3d3d3"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:transcriptMode="normal" />
+
+        <RelativeLayout
+            android:id="@+id/chat_input_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#ffffff"
+            android:padding="2dip" >
+
+            <ImageView
+                android:id="@+id/skin_input_bg"
+                android:layout_width="1.0dip"
+                android:layout_height="1.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="1dip"
+                android:background="@drawable/bottombar_button_bg"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/record_switcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="1dip"
+                android:background="@drawable/chatting_setmode_voice_btn"
+                android:contentDescription="@string/app_name" />
+
+            <FrameLayout
+                android:id="@+id/input_area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/record_switcher" >
+
+                <RelativeLayout
+                    android:id="@+id/chat_input_send_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip" >
+
+                    <FrameLayout
+                        android:id="@+id/send_switcher_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="2.0dip"
+                        android:addStatesFromChildren="true" >
+
+                        <ImageButton
+                            android:id="@+id/add_media_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@mipmap/type_select_btn_nor"
+                            android:text="@string/add_media"
+                            android:textColor="@color/skin_aio_send_button"
+                            android:textSize="14.0sp" />
+
+                        <Button
+                            android:id="@+id/send_msg_btn"
+                            android:layout_width="40dip"
+                            android:layout_height="40dip"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/chat_send_btn"
+                            android:text="@string/chat_send"
+                            android:textColor="@color/font_black"
+                            android:textSize="14.0sp"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                    <ImageButton
+                        android:id="@+id/face_btn"
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_alignTop="@+id/chat_msg_input"
+                        android:layout_toLeftOf="@+id/send_switcher_layout"
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/emotion" />
+
+                    <EditText
+                        android:id="@+id/chat_msg_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="2.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_toLeftOf="@id/face_btn"
+                        android:background="@drawable/ab_transparent_wanglai"
+                        android:imeActionLabel="@string/aio_ime_action_label"
+                        android:inputType="textMultiLine"
+                        android:maxLines="4"
+                        android:padding="2.5dip"
+                        android:textColor="@color/font_black"
+                        android:textSize="16.0sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/record_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginBottom="2.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2.5dp"
+                    android:background="@drawable/voice_rcd_btn_nor"
+                    android:gravity="center"
+                    android:text="@string/title_record_btn"
+                    android:textColor="@color/font_black"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        
+        
+        
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/select_face_or_media_window"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/face_select_dialog"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:visibility="gone" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/face_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="120.0dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:background="#0000"
+                android:flipInterval="30"
+                android:persistentDrawingCache="animation" />
+
+            <com.cfryan.wanglai4android.ui.view.CirclePageIndicator
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip" />
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/media_select_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="157dip"
+            android:layout_marginTop="40dip"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:horizontalSpacing="10dip"
+            android:numColumns="4"
+            android:verticalSpacing="20dip"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/preview_dialog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/preview_picture"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#000000"
+            android:scaleType="matrix"
+            android:contentDescription="@string/app_name"
+            android:layout_above="@+id/preview_option" />
+
+        <RelativeLayout
+            android:id="@+id/preview_option"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/preview_bottom"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <CheckBox
+                android:id="@+id/uncompressed_option"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="15dip"
+                android:text="原图" />
+
+            <Button
+                android:id="@+id/send_image_btn"
+                android:layout_width="70dip"
+                android:layout_height="35dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dip"
+                android:background="@drawable/chat_send_btn"
+                android:text="@string/chat_send"
+                android:textColor="@color/font_black"
+                android:textSize="14.0sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
